@@ -1,5 +1,5 @@
 <%= semantic_form_for @student do |f| %>
-  <%= f.input :year, as: :number %>
+  <%= f.input :year, label: "Year of study", as: :number, hint: "e.g. 3" %>
   <div class="grades">
   <%= f.semantic_fields_for :grades do |g| %>
     <%= render 'grade_fields', :f => g %>
