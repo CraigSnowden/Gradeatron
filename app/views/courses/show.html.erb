@@ -1,0 +1,1 @@
+<%= line_chart @grades.group(:percentage).count.map { |k,v| [k.to_i, v]} %>

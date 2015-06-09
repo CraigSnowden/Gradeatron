@@ -1,0 +1,12 @@
+<%= semantic_form_for @student do |f| %>
+  <%= f.input :year, as: :number %>
+  <div class="grades">
+  <%= f.semantic_fields_for :grades do |g| %>
+    <%= render 'grade_fields', :f => g %>
+  <% end %>
+  <%= link_to_add_association "Add a grade", f, :grades %>
+  </div>
+  <%= f.actions do %>
+    <%= f.submit "All done", class: "btn btn-primary" %>
+  <% end %>
+<% end %>
