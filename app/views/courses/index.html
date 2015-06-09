@@ -1,0 +1,14 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Course</th>
+      <th>Credits</th>
+    </tr>
+    <% @courses.each do |c| %>
+    <tr>
+      <td><%= link_to c.acronym, course_path(c.acronym) %></td>
+      <td><%= c.credits %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
