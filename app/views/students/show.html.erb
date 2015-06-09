@@ -1,0 +1,25 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Course</th>
+      <th>Credits</th>
+      <th>Percentage</th>
+    </tr>
+    <% @student.grades.each do |g| %>
+    <tr>
+      <td><%= g.course.acronym %></td>
+      <td><%= g.course.credits %></td>
+      <td><%= g.percentage %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Weighted Average</th>
+      <td><%= @student.weighted_average %></td>
+    </tr>
+  </tbody>
+</table>

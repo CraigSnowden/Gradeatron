@@ -6,7 +6,11 @@ class StudentsController < ApplicationController
   def create
     @student = Student.create(permitted_params)
     puts @student.errors.full_messages
-    redirect_to root_url
+    respond_with @student, location: -> { student_path(@student) }
+  end
+
+  def show
+    @student = Student.find(params[:id])
   end
 
   private
