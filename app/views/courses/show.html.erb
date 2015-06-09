@@ -1,1 +1,9 @@
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Mean</th>
+      <td><%= @grades.average(:percentage) %></td>
+    </tr>
+  </tbody>
+</table>
 <%= line_chart @grades.group(:percentage).count.map { |k,v| [k.to_i, v]} %>
