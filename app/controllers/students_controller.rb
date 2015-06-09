@@ -11,6 +11,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    respond_with @student
   end
 
   private
