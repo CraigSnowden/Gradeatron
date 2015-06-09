@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.2
-lock '3.2.1'
+lock '3.4'
 
 set :application, 'Gradeatron'
 set :repo_url, 'git@github.com:CraigSnowden/Gradeatron.git'
